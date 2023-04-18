@@ -8,7 +8,7 @@ function CookBookNavigator(props) {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name="CookbooksScreen" component={Cookbooks} />
+      <Stack.Screen name="Cookbooks" component={Cookbooks} />
       <Stack.Screen name="CookbookItem" component={CookbookItem} />
       <Stack.Screen name="RecipeItem" component={RecipeItem} />
     </Stack.Navigator>

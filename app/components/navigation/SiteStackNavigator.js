@@ -21,7 +21,7 @@ function SiteStackNavigator(props) {
       }}
     >
       <SiteStack.Screen name="Main" component={Home} />
-      <SiteStack.Screen name="Cookbooks" component={CookbookNavigator} />
+      <SiteStack.Screen name="CookbooksScreen" component={CookbookNavigator} />
       <SiteStack.Screen name="Inventory" component={InventoryNavigator} />
       <SiteStack.Screen name="Maintenace" component={MaintenanceNavigator} />
       <SiteStack.Screen name="MealPlanner" component={MealPlannerNavigator} />
