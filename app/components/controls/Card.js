@@ -6,15 +6,15 @@ import { AppText } from "../controls";
 
 function Card({ title, description, image, onPress }) {
   return (
-    <View style={styles.card}>
-      <TouchableWithoutFeedback onPress={onPress}>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.card}>
         <Image style={styles.cardImage} source={image} />
         <View style={styles.detailsContainer}>
           <AppText style={styles.cardTitle}>{title}</AppText>
           <AppText style={styles.cardSubtitle}>{description}</AppText>
         </View>
-      </TouchableWithoutFeedback>
-    </View>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
