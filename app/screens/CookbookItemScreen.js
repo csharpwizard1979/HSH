@@ -2,25 +2,30 @@ import React from "react";
 import { View, Image, StyleSheet, FlatList } from "react-native";
 
 import config from "../configs/config";
-import { AppText, Card } from "../components/controls";
+import { AppText, Button, ListItem } from "../components/controls";
 import { Routes } from "../components/navigation";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 function CookbookItemScreen({ navigation, route }) {
   const item = route.params;
   return (
     <View style={config.styles.screen}>
-      <Image style={styles.image} source={item.image} />
       <View style={styles.detailsContainer}>
-        <AppText style={styles.text}>{item.title}</AppText>
+        <AppText style={styles.text}>{item.title}/Recipes</AppText>
+        <MaterialCommunityIcons
+          name="file-search-outline"
+          size={20}
+          color={config.colors.primary}
+        />
       </View>
       <FlatList
         data={item.recipes}
         keyExtractor={(recipe) => recipe.id.toString()}
         renderItem={({ item }) => (
           <View style={config.styles.detailsContainer}>
-            <Card
+            <ListItem
               title={item.title}
-              description={item.description}
+              subTitle={item.description}
               image={item.image}
               onPress={() => navigation.navigate(Routes.RECIPEITEM, item)}
             />
@@ -33,16 +38,21 @@ function CookbookItemScreen({ navigation, route }) {
 
 const styles = StyleSheet.create({
   detailsContainer: {
-    alignItems: "center",
-    marginTop: 15,
+    flexDirection: "row",
+    padding: 20,
+    justifyContent: "space-between",
   },
   image: {
     width: "100%",
     height: 200,
   },
   text: {
-    fontSize: 24,
+    fontSize: 16,
     fontWeight: "bold",
+  },
+  icon: {
+    flex: 1,
+    alignSelf: "flex-end",
   },
 });
 

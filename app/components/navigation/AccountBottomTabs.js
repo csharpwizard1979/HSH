@@ -15,7 +15,7 @@ function AccountBottomTabs(props) {
         tabBarActiveTintColor: colors.white,
         tabBarInactiveTintColor: colors.medium,
         tabBarStyle: {
-          backgroundColor: colors.info,
+          backgroundColor: colors.primary,
         },
       }}
     >

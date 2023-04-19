@@ -11,6 +11,36 @@ export default [
         description: "Instructions included",
         image: require("../../assets/cooking.jpg"),
       },
+      {
+        id: 2,
+        title: "Main Recipe",
+        description: "Instructions included",
+        image: require("../../assets/cooking.jpg"),
+      },
+      {
+        id: 3,
+        title: "Main Recipe",
+        description: "Instructions included",
+        image: require("../../assets/cooking.jpg"),
+      },
+      {
+        id: 4,
+        title: "Main Recipe",
+        description: "Instructions included",
+        image: require("../../assets/cooking.jpg"),
+      },
+      {
+        id: 5,
+        title: "Main Recipe",
+        description: "Instructions included",
+        image: require("../../assets/cooking.jpg"),
+      },
+      {
+        id: 6,
+        title: "Main Recipe",
+        description: "Instructions included",
+        image: require("../../assets/cooking.jpg"),
+      },
     ],
   },
   {
