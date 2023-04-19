@@ -7,9 +7,13 @@ function CookBookNavigator(props) {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator mode="modal">
       <Stack.Screen name="CookbooksScreen" component={Cookbooks} />
-      <Stack.Screen name="CookbookItem" component={CookbookItem} />
+      <Stack.Screen
+        name="CookbookItem"
+        component={CookbookItem}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="RecipeItem" component={RecipeItem} />
     </Stack.Navigator>
   );

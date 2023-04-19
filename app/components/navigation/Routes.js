@@ -5,5 +5,6 @@ export default Object.freeze({
   INVENTORY: "Inventory",
   MAINTENANCE: "Maintenance",
   PROJECTS: "Projects",
+  RECIPEITEM: "RecipeItem",
   SHOPPINGLIST: "ShoppingList",
 });

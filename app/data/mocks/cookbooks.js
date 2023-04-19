@@ -4,7 +4,14 @@ export default [
     title: "Smith Family Cookbook",
     description: "Our Family Secrets",
     image: require("../../assets/recipe-cover.jpg"),
-    recipes: [],
+    recipes: [
+      {
+        id: 1,
+        title: "Main Recipe",
+        description: "Instructions included",
+        image: require("../../assets/cooking.jpg"),
+      },
+    ],
   },
   {
     id: 2,

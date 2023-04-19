@@ -13,12 +13,14 @@ function CookbooksScreen({ navigation }) {
         data={cookbooks}
         keyExtractor={(cookbook) => cookbook.id.toString()}
         renderItem={({ item }) => (
-          <Card
-            title={item.title}
-            description={item.description}
-            image={item.image}
-            onPress={() => navigation.navigate(Routes.COOKBOOKITEM, item)}
-          />
+          <View style={styles.detailsContainer}>
+            <Card
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              onPress={() => navigation.navigate(Routes.COOKBOOKITEM, item)}
+            />
+          </View>
         )}
       />
     </View>
