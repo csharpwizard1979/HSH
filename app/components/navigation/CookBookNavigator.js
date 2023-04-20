@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { Cookbooks, CookbookItem, RecipeBox } from "../../screens";
+import { Cookbooks, CookbookItem, RecipeBox, RecipeItem } from "../../screens";
 
 function CookBookNavigator(props) {
   const Stack = createStackNavigator();
@@ -19,6 +19,7 @@ function CookBookNavigator(props) {
         options={{ headerShown: false }}
       />
       <Stack.Screen name="Recipebox" component={RecipeBox} />
+      <Stack.Screen name="Recipeitem" component={RecipeItem} />
     </Stack.Navigator>
   );
 }
