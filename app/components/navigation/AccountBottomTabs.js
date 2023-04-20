@@ -13,7 +13,7 @@ function AccountBottomTabs(props) {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: colors.white,
-        tabBarInactiveTintColor: colors.medium,
+        tabBarInactiveTintColor: colors.black,
         tabBarStyle: {
           backgroundColor: colors.primary,
         },

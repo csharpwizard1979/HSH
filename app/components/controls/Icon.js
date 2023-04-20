@@ -7,7 +7,7 @@ function Icon({
   size = 40,
   backgroundColor = "#000",
   iconColor = "#fff",
-  library,
+  library = "MIC",
 }) {
   return (
     <View
