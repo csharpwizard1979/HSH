@@ -26,14 +26,14 @@ export default [
     id: 4,
     icon: "food-croissant",
     label: "Snacks & Appetizers",
-    backgroundColor: colors.black,
+    backgroundColor: colors.info,
     value: "snacks",
   },
   {
     id: 5,
     icon: "food-variant",
     label: "Soups & Stews",
-    backgroundColor: colors.info,
+    backgroundColor: colors.warningAlt,
     value: "soups",
   },
   {
@@ -42,5 +42,12 @@ export default [
     label: "Desserts",
     backgroundColor: colors.danger,
     value: "desserts",
+  },
+  {
+    id: 7,
+    icon: "selection-ellipse-remove",
+    label: "Remove Filter",
+    backgroundColor: colors.black,
+    value: "",
   },
 ];

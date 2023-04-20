@@ -25,7 +25,7 @@ export default {
   card: {
     borderRadius: 15,
     overflow: "hidden",
-    backgroundColor: colors.white,
+    backgroundColor: colors.light,
     marginBottom: 20,
   },
   cardImage: {

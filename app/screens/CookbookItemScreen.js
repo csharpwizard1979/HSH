@@ -10,7 +10,12 @@ import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
 import config from "../configs/config";
 import categories from "../data/categories";
-import { AppText, ListItem, PickerItemCategory } from "../components/controls";
+import {
+  AppText,
+  ListItem,
+  ListItemSeparator,
+  PickerItemCategory,
+} from "../components/controls";
 import { Routes } from "../components/navigation";
 
 function CookbookItemScreen({ navigation, route }) {
@@ -19,16 +24,16 @@ function CookbookItemScreen({ navigation, route }) {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    console.log(recipes);
-    console.log(filter);
-    if (filter) setRecipes(recipes?.filter((x) => x.category === filter));
+    if (filter)
+      setRecipes(route.params.recipes?.filter((x) => x.category === filter));
+    else setRecipes(route.params.recipes);
   }, [filter]);
 
   return (
     <>
       <View style={config.styles.screen}>
         <View style={styles.detailsContainer}>
-          <AppText style={styles.text}>{route.params.title}/Recipes</AppText>
+          <AppText style={styles.text}>{route.params.title}::Recipes</AppText>
           <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
             <MaterialCommunityIcons
               name="filter-outline"
@@ -57,13 +62,13 @@ function CookbookItemScreen({ navigation, route }) {
                 image={item.image}
                 onPress={() => navigation.navigate(Routes.RECIPEITEM, item)}
               />
+              <ListItemSeparator />
             </View>
           )}
         />
       </View>
       <Modal visible={modalVisible} animationType="slide">
         <View style={config.styles.screen}>
-          <AppText>Filter Reipes by Category</AppText>
           <FlatList
             data={categories}
             keyExtractor={(category) => category.id.toString()}
@@ -86,6 +91,7 @@ function CookbookItemScreen({ navigation, route }) {
 
 const styles = StyleSheet.create({
   detailsContainer: {
+    backgroundColor: config.colors.light,
     flexDirection: "row",
     padding: 20,
     justifyContent: "space-between",
