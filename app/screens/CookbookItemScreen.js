@@ -37,7 +37,7 @@ function CookbookItemScreen({ navigation, route }) {
             />
           </TouchableWithoutFeedback>
           <TouchableWithoutFeedback
-            onPress={() => navigation.navigate("Recipebox")}
+            onPress={() => navigation.navigate(Routes.RECIPEBOX)}
           >
             <MaterialIcons
               name="library-add"

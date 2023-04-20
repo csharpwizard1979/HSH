@@ -18,8 +18,8 @@ function CookBookNavigator(props) {
         component={CookbookItem}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="Recipebox" component={RecipeBox} />
-      <Stack.Screen name="Recipeitem" component={RecipeItem} />
+      <Stack.Screen name="RecipeBox" component={RecipeBox} />
+      <Stack.Screen name="RecipeItem" component={RecipeItem} />
     </Stack.Navigator>
   );
 }
