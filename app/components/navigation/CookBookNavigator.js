@@ -9,6 +9,7 @@ import {
   CookbookDetails,
   RecipeBox,
   RecipeDetails,
+  RecipeCreate,
 } from "../../screens";
 import colors from "../../configs/colors";
 
@@ -46,6 +47,11 @@ function CookBookNavigator(props) {
         options={{
           title: "My Recipe Box",
         }}
+      />
+      <Stack.Screen
+        name="RecipeCreate"
+        component={RecipeCreate}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="RecipeDetails"

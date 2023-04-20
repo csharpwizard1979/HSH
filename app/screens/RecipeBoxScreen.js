@@ -17,8 +17,9 @@ import {
   ListItemSeparator,
   PickerItemCategory,
 } from "../components/controls";
+import { Routes } from "../components/navigation";
 
-function RecipeBoxScreen(props) {
+function RecipeBoxScreen({ navigation, route }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [filter, setFilter] = useState(recipeFilter);
   const [recipes, setRecipes] = useState(mockRecipes);
@@ -99,7 +100,9 @@ function RecipeBoxScreen(props) {
               color={filter.favoriteIcon.color}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(Routes.RECIPE_CREATE)}
+          >
             <MaterialIcons
               name={config.icons.addItem}
               size={25}
