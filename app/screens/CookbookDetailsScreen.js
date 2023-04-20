@@ -42,7 +42,7 @@ function CookbookItemScreen({ navigation, route }) {
             />
           </TouchableWithoutFeedback>
           <TouchableWithoutFeedback
-            onPress={() => navigation.navigate(Routes.RECIPEBOX)}
+            onPress={() => navigation.navigate(Routes.RECIPE_BOX)}
           >
             <MaterialIcons
               name="library-add"
@@ -60,7 +60,7 @@ function CookbookItemScreen({ navigation, route }) {
                 title={item.title}
                 subTitle={item.description}
                 image={item.image}
-                onPress={() => navigation.navigate(Routes.RECIPEITEM, item)}
+                onPress={() => navigation.navigate(Routes.RECIPE_DETAILS, item)}
               />
               <ListItemSeparator />
             </View>

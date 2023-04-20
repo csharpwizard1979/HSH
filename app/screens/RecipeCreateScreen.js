@@ -4,7 +4,7 @@ import { View, Text } from "react-native";
 import config from "../configs/config";
 import { AppText } from "../components/controls";
 
-function RecipesScreen(props) {
+function RecipeCreateScreen(props) {
   return (
     <View style={config.styles.screen}>
       <View style={config.styles.detailsContainer}>
@@ -14,4 +14,4 @@ function RecipesScreen(props) {
   );
 }
 
-export default RecipesScreen;
+export default RecipeCreateScreen;

@@ -4,7 +4,12 @@ import {
   createStackNavigator,
 } from "@react-navigation/stack";
 
-import { Cookbooks, CookbookItem, RecipeBox, RecipeItem } from "../../screens";
+import {
+  Cookbooks,
+  CookbookDetails,
+  RecipeBox,
+  RecipeDetails,
+} from "../../screens";
 import colors from "../../configs/colors";
 
 function CookBookNavigator(props) {
@@ -31,8 +36,8 @@ function CookBookNavigator(props) {
         }}
       />
       <Stack.Screen
-        name="CookbookItem"
-        component={CookbookItem}
+        name="CookbookDetails"
+        component={CookbookDetails}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -43,8 +48,8 @@ function CookBookNavigator(props) {
         }}
       />
       <Stack.Screen
-        name="RecipeItem"
-        component={RecipeItem}
+        name="RecipeDetails"
+        component={RecipeDetails}
         options={({ route }) => ({
           title: route.params.title,
         })}

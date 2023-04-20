@@ -1,11 +1,11 @@
 export default Object.freeze({
   HOME: "Home",
   COOKBOOKS: "Cookbooks",
-  COOKBOOKITEM: "CookbookItem",
+  COOKBOOK_DETAILS: "CookbookDetails",
   INVENTORY: "Inventory",
   MAINTENANCE: "Maintenance",
   PROJECTS: "Projects",
-  RECIPEITEM: "RecipeItem",
-  RECIPEBOX: "RecipeBox",
+  RECIPE_DETAILS: "RecipeDetails",
+  RECIPE_BOX: "RecipeBox",
   SHOPPINGLIST: "ShoppingList",
 });

@@ -18,7 +18,7 @@ function CookbooksScreen({ navigation }) {
               title={item.title}
               description={item.description}
               image={item.image}
-              onPress={() => navigation.navigate(Routes.COOKBOOKITEM, item)}
+              onPress={() => navigation.navigate(Routes.COOKBOOK_DETAILS, item)}
             />
           </View>
         )}
