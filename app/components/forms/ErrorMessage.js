@@ -1,6 +1,6 @@
 import React from "react";
 
-import AppText from "../AppText";
+import { AppText } from "../controls";
 import config from "../../configs/config";
 
 function ErrorMessage({ error, visible }) {

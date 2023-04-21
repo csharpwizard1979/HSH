@@ -3,6 +3,8 @@ export { default as AppTextInput } from "./AppTextInput";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
 export { default as Icon } from "./Icon";
+export { default as ImageInput } from "./ImageInput";
+export { default as ImageInputList } from "./ImageInputList";
 export { default as ListItem } from "./ListItem";
 export { default as ListItemRemove } from "./ListItemRemove";
 export { default as ListItemSeparator } from "./ListItemSeparator";
