@@ -2,6 +2,7 @@ export default {
   addCheck: "library-add-check", // MI
   addItem: "add-circle", // MI
   addTask: "add-task", // MI
+  cart: "shopping-outline", // MCI
   close: "close-fullscreen", // MI
   check: "checkbox-blank-outline", // MCI
   checked: "checkbox-intermediate", // MCI
