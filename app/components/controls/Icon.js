@@ -1,13 +1,15 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+
+import config from "../../configs/config";
 
 function Icon({
   name,
   size = 40,
-  backgroundColor = "#000",
-  iconColor = "#fff",
-  library = "MIC",
+  backgroundColor = config.colors.primary,
+  iconColor = config.colors.white,
+  library = "MCI",
 }) {
   return (
     <View
