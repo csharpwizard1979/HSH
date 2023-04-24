@@ -11,3 +11,4 @@ export { default as ListItemSeparator } from "./ListItemSeparator";
 export { default as Picker } from "./Picker";
 export { default as PickerItemCategory } from "./PickerItemCategory";
 export { default as PickerItemList } from "./PickerItemList";
+export { default as TabItem } from "./TabItem";
