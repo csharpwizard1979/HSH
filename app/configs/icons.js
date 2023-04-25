@@ -16,6 +16,7 @@ export default {
   list: "view-list", // MI
   home: "home", // MI
   menu: "menu-book", // MI
+  notifications: "notifications", // MI
   search: "file-search-outline", // MCI
   searchActive: "file-search", // MCI
   open: "open-in-full", // MI

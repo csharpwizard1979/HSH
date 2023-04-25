@@ -1,8 +1,10 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
-import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import { View, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import config from "../configs/config";
+import { AppText, Icon } from "../components/controls";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 function AccountScreen({ navigation, route }) {
   return (
@@ -18,10 +20,24 @@ function AccountScreen({ navigation, route }) {
             />
           </View>
         </View>
-        <Text>My Account</Text>
+        <AppText style={styles.title}>My Account</AppText>
       </View>
-      <View style={styles.detailsContainer}></View>
-      <View style={styles.footer}></View>
+      <View style={styles.detailsContainer}>
+        <View style={styles.notify}>
+          <Icon name={config.icons.notifications} library="MI" />
+          <AppText style={styles.text}>Notifications</AppText>
+        </View>
+      </View>
+      <View style={styles.footer}>
+        <View style={styles.footerRow}>
+          <TouchableWithoutFeedback
+            onPress={() => navigation.navigate("Welcome")}
+          >
+            <Icon name="logout" />
+          </TouchableWithoutFeedback>
+          <AppText style={styles.text}>Log Out</AppText>
+        </View>
+      </View>
     </>
   );
 }
@@ -55,11 +71,30 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
-  footer: {},
+  footer: {
+    backgroundColor: config.colors.light,
+  },
+  footerRow: {
+    alignItems: "center",
+    flexDirection: "row",
+    margin: 20,
+  },
   icon: {
     alignSelf: "center",
     justifyContent: "center",
     marginTop: 10,
+  },
+  notify: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  text: {
+    fontWeight: "bold",
+    marginLeft: 20,
+  },
+  title: {
+    fontWeight: "600",
+    fontSize: 18,
   },
 });
 
