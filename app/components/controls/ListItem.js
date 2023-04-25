@@ -16,6 +16,7 @@ function ListItem({
   IconComponent,
   onPress,
   renderRightActions,
+  showIconRight = true,
 }) {
   return (
     <GestureHandlerRootView>
@@ -39,11 +40,13 @@ function ListItem({
                 </AppText>
               )}
             </View>
-            <MaterialCommunityIcons
-              color={config.colors.medium}
-              name="chevron-right"
-              size={25}
-            />
+            {showIconRight && (
+              <MaterialCommunityIcons
+                color={config.colors.medium}
+                name="chevron-right"
+                size={25}
+              />
+            )}
           </View>
         </TouchableHighlight>
       </Swipeable>

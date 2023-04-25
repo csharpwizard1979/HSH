@@ -5,6 +5,8 @@ export { default as Inventory } from "./InventoryHomeScreen";
 export { default as Login } from "./LoginScreen";
 export { default as Maintence } from "./MaintenceHomeScreen";
 export { default as MealPlanner } from "./MealPlannerScreen";
+export { default as MealPlan } from "./MealPlanScreen";
+export { default as MyLists } from "./MyLists";
 export { default as Projects } from "./ProjectsHomeScreen";
 export { default as RecipeBox } from "./RecipeBoxScreen";
 export { default as RecipeDetails } from "./RecipeDetailsScreen";

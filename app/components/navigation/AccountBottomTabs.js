@@ -2,9 +2,9 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
-import { Account, Home, RecipeBox, Welcome } from "../../screens";
+import { MealPlan, MyLists } from "../../screens";
 import { SiteStackNavigator, AuthNavigator } from "../navigation";
-import colors from "../../configs/colors";
+import config from "../../configs/config";
 
 function AccountBottomTabs(props) {
   const Tab = createBottomTabNavigator();
@@ -12,10 +12,10 @@ function AccountBottomTabs(props) {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: colors.white,
-        tabBarInactiveTintColor: colors.black,
+        tabBarActiveTintColor: config.colors.white,
+        tabBarInactiveTintColor: config.colors.black,
         tabBarStyle: {
-          backgroundColor: colors.primary,
+          backgroundColor: config.colors.primary,
         },
       }}
     >
@@ -24,34 +24,42 @@ function AccountBottomTabs(props) {
         component={SiteStackNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons
+              name={config.icons.home}
+              color={color}
+              size={size}
+            />
           ),
         }}
       />
       <Tab.Screen
-        name="Account"
-        component={Account}
+        name="My Lists"
+        component={MyLists}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="account-circle" color={color} size={size} />
+            <MaterialIcons name={config.icons.list} color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="Recipes"
-        component={RecipeBox}
+        name="Meal Plan"
+        component={MealPlan}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="menu-book" color={color} size={size} />
+            <MaterialIcons name={config.icons.menu} color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="Logout"
+        name="My Account"
         component={AuthNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="logout" color={color} size={size} />
+            <MaterialIcons
+              name={config.icons.account}
+              color={color}
+              size={size}
+            />
           ),
         }}
       />

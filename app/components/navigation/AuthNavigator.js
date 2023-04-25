@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { Login, Register, Welcome } from "../../screens";
+import { Account, Login, Register, Welcome } from "../../screens";
 import SiteStackNavigator from "./SiteStackNavigator";
 
 function AuthNavigator(props) {
@@ -12,6 +12,7 @@ function AuthNavigator(props) {
         headerShown: false,
       }}
     >
+      <MainStack.Screen name="Account" component={Account} />
       <MainStack.Screen name="Welcome" component={Welcome} />
       <MainStack.Screen name="Login" component={Login} />
       <MainStack.Screen name="Register" component={Register} />

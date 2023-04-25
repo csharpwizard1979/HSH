@@ -1,4 +1,5 @@
 export default {
+  account: "account-circle", // MI
   addCheck: "library-add-check", // MI
   addItem: "add-circle", // MI
   addTask: "add-task", // MI
@@ -11,6 +12,10 @@ export default {
   favoriteActive: "favorite", // MCI
   filter: "filter-outline", // MCI
   filterActive: "filter", // MCI
+  food: "restaurant-menu", // MI
+  list: "view-list", // MI
+  home: "home", // MI
+  menu: "menu-book", // MI
   search: "file-search-outline", // MCI
   searchActive: "file-search", // MCI
   open: "open-in-full", // MI

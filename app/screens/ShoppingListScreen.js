@@ -61,11 +61,16 @@ function ShoppingListScreen({ navigation }) {
               title={item.title}
               subTitle={item.description}
               IconComponent={<Icon name={config.icons.cart} />}
+              showIconRight={false}
             />
           )}
         />
       </View>
-      {completed && <Button title="Done" onPress={handleCheckout} />}
+      {completed && (
+        <View style={styles.footer}>
+          <Button title="Done" color="success" onPress={handleCheckout} />
+        </View>
+      )}
     </View>
   );
 }
@@ -76,6 +81,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   container: {
+    padding: 20,
+  },
+  footer: {
     padding: 20,
   },
 });
