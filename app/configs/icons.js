@@ -17,9 +17,11 @@ export default {
   home: "home", // MI
   menu: "menu-book", // MI
   notifications: "notifications", // MI
+  projects: "arrow-projectile-multiple", // MCI
   search: "file-search-outline", // MCI
   searchActive: "file-search", // MCI
   open: "open-in-full", // MI
-  shopping: "add-shopping-cart", // MI
+  shopping: "shopping-cart", // MI
+  shoppingAdd: "add-shopping-cart", // MI
   update: "update", // MI
 };

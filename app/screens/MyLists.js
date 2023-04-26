@@ -1,19 +1,48 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 
 import config from "../configs/config";
-import { Text } from "react-native";
+import {
+  AppText,
+  Icon,
+  ListItem,
+  ListItemSeparator,
+} from "../components/controls";
 
-function MyLists(props) {
+function MyLists({ navigation }) {
   return (
     <View style={config.styles.screen}>
-      <Text>My Lists</Text>
+      <View style={styles.container}>
+        <ListItem
+          title="Project List"
+          IconComponent={
+            <Icon
+              name={config.icons.projects}
+              backgroundColor={config.colors.warning}
+            />
+          }
+          onPress={() => navigation.navigate("Projects")}
+        />
+        <ListItem
+          title="Shopping List"
+          IconComponent={
+            <Icon
+              name={config.icons.shopping}
+              library="MI"
+              backgroundColor={config.colors.danger}
+            />
+          }
+          onPress={() => navigation.navigate("ShoppingList")}
+        />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    padding: 20,
+  },
 });
 
 export default MyLists;
