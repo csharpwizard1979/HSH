@@ -34,6 +34,17 @@ function MyLists({ navigation }) {
           }
           onPress={() => navigation.navigate("ShoppingList")}
         />
+        <ListItem
+          title="TODO List"
+          IconComponent={
+            <Icon
+              name={config.icons.list}
+              library="MI"
+              backgroundColor={config.colors.danger}
+            />
+          }
+          onPress={() => navigation.navigate("ShoppingList")}
+        />
       </View>
     </View>
   );
