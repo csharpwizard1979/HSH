@@ -16,11 +16,15 @@ function ListItem({
   IconComponent,
   onPress,
   renderRightActions,
+  renderLeftActions,
   showIconRight = true,
 }) {
   return (
     <GestureHandlerRootView>
-      <Swipeable renderRightActions={renderRightActions}>
+      <Swipeable
+        renderRightActions={renderRightActions}
+        renderLeftActions={renderLeftActions}
+      >
         <TouchableHighlight
           underlayColor={config.colors.light}
           onPress={onPress}
