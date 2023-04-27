@@ -24,21 +24,21 @@ function MyLists({ navigation }) {
           onPress={() => navigation.navigate("Projects")}
         />
         <ListItem
-          title="Shopping List"
+          title="TODO List"
           IconComponent={
             <Icon
-              name={config.icons.shopping}
+              name={config.icons.list}
               library="MI"
-              backgroundColor={config.colors.danger}
+              backgroundColor={config.colors.success}
             />
           }
           onPress={() => navigation.navigate("ShoppingList")}
         />
         <ListItem
-          title="TODO List"
+          title="Shopping List"
           IconComponent={
             <Icon
-              name={config.icons.list}
+              name={config.icons.shopping}
               library="MI"
               backgroundColor={config.colors.danger}
             />
