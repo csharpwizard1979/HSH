@@ -27,6 +27,14 @@ function ShoppingListScreen({ navigation }) {
     setCompleted(true);
   };
 
+  const handleComplete = (item) => {
+    Alert.alert("System Update", { item }, [
+      {
+        text: "Ok",
+      },
+    ]);
+  };
+
   const handleCheckout = () => {
     // TODO: clear completed items from shopping list
     // TODO: update inventory with completed items
@@ -40,6 +48,14 @@ function ShoppingListScreen({ navigation }) {
         },
       ]
     );
+  };
+
+  const handleRemove = (item) => {
+    Alert.alert("System Update", { item }, [
+      {
+        text: "Ok",
+      },
+    ]);
   };
 
   return (
