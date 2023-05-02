@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { View, FlatList, StyleSheet } from "react-native";
+import { Alert, View, FlatList, StyleSheet } from "react-native";
 
 import config from "../configs/config";
-import { Button, ListItem, Icon, TabItem } from "../components/controls";
+import {
+  Button,
+  ListItem,
+  Icon,
+  TabItem,
+  ListItemRemove,
+  ListItemComplete,
+} from "../components/controls";
 import shoppingList from "../data/mocks/shoppingList";
-import { Alert } from "react-native";
 
 function ShoppingListScreen({ navigation }) {
   const [active, setActive] = useState(true);
@@ -14,7 +20,7 @@ function ShoppingListScreen({ navigation }) {
   useEffect(() => {
     let status = "completed";
     if (active) status = "active";
-    setList(shoppingList.filter((s) => s.status === status));
+    setList(list.filter((s) => s.status === status));
   }, [active, completed]);
 
   const handleActiveTab = () => {
@@ -27,13 +33,7 @@ function ShoppingListScreen({ navigation }) {
     setCompleted(true);
   };
 
-  const handleComplete = (item) => {
-    Alert.alert("System Update", { item }, [
-      {
-        text: "Ok",
-      },
-    ]);
-  };
+  const handleComplete = (item) => {};
 
   const handleCheckout = () => {
     // TODO: clear completed items from shopping list
@@ -51,11 +51,7 @@ function ShoppingListScreen({ navigation }) {
   };
 
   const handleRemove = (item) => {
-    Alert.alert("System Update", { item }, [
-      {
-        text: "Ok",
-      },
-    ]);
+    setList(shoppingList.filter((x) => x.id !== item.id));
   };
 
   return (
@@ -78,6 +74,12 @@ function ShoppingListScreen({ navigation }) {
               subTitle={item.description}
               IconComponent={<Icon name={config.icons.cart} />}
               showIconRight={false}
+              renderRightActions={() => (
+                <ListItemRemove onPress={() => handleRemove(item)} />
+              )}
+              renderLeftActions={() => (
+                <ListItemComplete onPress={() => handleComplete(item)} />
+              )}
             />
           )}
         />
