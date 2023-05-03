@@ -20,7 +20,7 @@ function ShoppingListScreen({ navigation }) {
   useEffect(() => {
     let status = "completed";
     if (active) status = "active";
-    setList(list.filter((s) => s.status === status));
+    setList(shoppingList.filter((s) => s.status === status));
   }, [active, completed]);
 
   const handleActiveTab = () => {
