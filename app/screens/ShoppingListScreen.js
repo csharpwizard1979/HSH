@@ -13,27 +13,23 @@ import {
 import shoppingList from "../data/mocks/shoppingList";
 
 function ShoppingListScreen({ navigation }) {
-  const [active, setActive] = useState(true);
-  const [completed, setCompleted] = useState(false);
-  const [list, setList] = useState(shoppingList);
+  const [status, setStatus] = useState("active");
+  const [activeList, setActiveList] = useState(() =>
+    shoppingList.filter((x) => x.status === "active")
+  );
+  const [completedList, setCompletedList] = useState(() =>
+    shoppingList.filter((x) => x.status === "completed")
+  );
 
-  useEffect(() => {
-    let status = "completed";
-    if (active) status = "active";
-    setList(shoppingList.filter((s) => s.status === status));
-  }, [active, completed]);
-
-  const handleActiveTab = () => {
-    setActive(true);
-    setCompleted(false);
+  const handleActivate = (item) => {
+    setActiveList([...activeList, item]);
+    setCompletedList(completedList.filter((x) => x.id !== item.id));
   };
 
-  const handleCompletedTab = () => {
-    setActive(false);
-    setCompleted(true);
+  const handleComplete = (item) => {
+    setCompletedList([...completedList, item]);
+    setActiveList(activeList.filter((x) => x.id !== item.id));
   };
-
-  const handleComplete = (item) => {};
 
   const handleCheckout = () => {
     // TODO: clear completed items from shopping list
@@ -51,44 +47,69 @@ function ShoppingListScreen({ navigation }) {
   };
 
   const handleRemove = (item) => {
-    setList(shoppingList.filter((x) => x.id !== item.id));
+    setActiveList(activeList.filter((x) => x.id !== item.id));
+  };
+
+  const toggleStatus = () => {
+    setStatus(status === "active" ? "completed" : "active");
   };
 
   return (
     <View style={config.styles.screen}>
       <View style={styles.btnContainer}>
-        <TabItem isActive={active} onPress={handleActiveTab}>
+        <TabItem isActive={status === "active"} onPress={toggleStatus}>
           Active
         </TabItem>
-        <TabItem isActive={completed} onPress={handleCompletedTab}>
+        <TabItem isActive={status === "completed"} onPress={toggleStatus}>
           Completed
         </TabItem>
       </View>
       <View style={styles.container}>
-        <FlatList
-          data={list}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => (
-            <ListItem
-              title={item.title}
-              subTitle={item.description}
-              IconComponent={<Icon name={config.icons.cart} />}
-              showIconRight={false}
-              renderRightActions={() => (
-                <ListItemRemove onPress={() => handleRemove(item)} />
-              )}
-              renderLeftActions={() => (
-                <ListItemComplete onPress={() => handleComplete(item)} />
+        {status === "active" && (
+          <>
+            <FlatList
+              data={activeList}
+              keyExtractor={(item) => item.id.toString()}
+              renderItem={({ item }) => (
+                <ListItem
+                  title={item.title}
+                  subTitle={item.description}
+                  IconComponent={<Icon name={config.icons.cart} />}
+                  showIconRight={false}
+                  renderRightActions={() => (
+                    <ListItemRemove onPress={() => handleRemove(item)} />
+                  )}
+                  renderLeftActions={() => (
+                    <ListItemComplete onPress={() => handleComplete(item)} />
+                  )}
+                />
               )}
             />
-          )}
-        />
+          </>
+        )}
+        {status === "completed" && (
+          <>
+            <FlatList
+              data={completedList}
+              keyExtractor={(item) => item.id.toString()}
+              renderItem={({ item }) => (
+                <ListItem
+                  title={item.title}
+                  subTitle={item.description}
+                  IconComponent={<Icon name={config.icons.cart} />}
+                  showIconRight={false}
+                  renderLeftActions={() => (
+                    <ListItemComplete onPress={() => handleActivate(item)} />
+                  )}
+                />
+              )}
+            />
+            <View style={styles.footer}>
+              <Button title="Done" color="success" onPress={handleCheckout} />
+            </View>
+          </>
+        )}
       </View>
-      {completed && (
-        <View style={styles.footer}>
-          <Button title="Done" color="success" onPress={handleCheckout} />
-        </View>
-      )}
     </View>
   );
 }
