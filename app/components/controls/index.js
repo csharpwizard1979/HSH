@@ -6,7 +6,7 @@ export { default as Icon } from "./Icon";
 export { default as ImageInput } from "./ImageInput";
 export { default as ImageInputList } from "./ImageInputList";
 export { default as ListItem } from "./ListItem";
-export { default as ListItemComplete } from "./ListItemComplete";
+export { default as ListItemAction } from "./ListItemAction";
 export { default as ListItemRemove } from "./ListItemRemove";
 export { default as ListItemSeparator } from "./ListItemSeparator";
 export { default as Picker } from "./Picker";

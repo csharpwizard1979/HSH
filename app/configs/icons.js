@@ -23,5 +23,6 @@ export default {
   open: "open-in-full", // MI
   shopping: "shopping-cart", // MI
   shoppingAdd: "add-shopping-cart", // MI
+  trash: "trash-can", // MCI
   update: "update", // MI
 };

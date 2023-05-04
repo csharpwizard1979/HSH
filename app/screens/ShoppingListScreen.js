@@ -7,8 +7,7 @@ import {
   ListItem,
   Icon,
   TabItem,
-  ListItemRemove,
-  ListItemComplete,
+  ListItemAction,
 } from "../components/controls";
 import shoppingList from "../data/mocks/shoppingList";
 
@@ -77,10 +76,18 @@ function ShoppingListScreen({ navigation }) {
                   IconComponent={<Icon name={config.icons.cart} />}
                   showIconRight={false}
                   renderRightActions={() => (
-                    <ListItemRemove onPress={() => handleRemove(item)} />
+                    <ListItemAction
+                      background={config.colors.danger}
+                      icon={{ library: "MCI", name: config.icons.trash }}
+                      onPress={() => handleRemove(item)}
+                    />
                   )}
                   renderLeftActions={() => (
-                    <ListItemComplete onPress={() => handleComplete(item)} />
+                    <ListItemAction
+                      background={config.colors.success}
+                      icon={{ library: "MI", name: config.icons.addCheck }}
+                      onPress={() => handleComplete(item)}
+                    />
                   )}
                 />
               )}
@@ -99,7 +106,11 @@ function ShoppingListScreen({ navigation }) {
                   IconComponent={<Icon name={config.icons.cart} />}
                   showIconRight={false}
                   renderLeftActions={() => (
-                    <ListItemComplete onPress={() => handleActivate(item)} />
+                    <ListItemAction
+                      background={config.colors.warning}
+                      icon={{ library: "MI", name: config.icons.addTask }}
+                      onPress={() => handleActivate(item)}
+                    />
                   )}
                 />
               )}
