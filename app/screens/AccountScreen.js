@@ -5,6 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import config from "../configs/config";
 import { AppText, Icon } from "../components/controls";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import { Routes } from "../components/navigation";
 
 function AccountScreen({ navigation, route }) {
   return (
@@ -31,7 +32,7 @@ function AccountScreen({ navigation, route }) {
       <View style={styles.footer}>
         <View style={styles.footerRow}>
           <TouchableWithoutFeedback
-            onPress={() => navigation.navigate("Welcome")}
+            onPress={() => navigation.navigate(Routes.WELCOME)}
           >
             <Icon name="logout" />
           </TouchableWithoutFeedback>

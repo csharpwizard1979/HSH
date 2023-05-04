@@ -11,6 +11,7 @@ import {
   RecipeDetails,
   RecipeCreate,
 } from "../../screens";
+import Routes from "./Routes";
 import colors from "../../configs/colors";
 
 function CookBookNavigator(props) {
@@ -30,31 +31,31 @@ function CookBookNavigator(props) {
       }}
     >
       <Stack.Screen
-        name="CookbooksScreen"
+        name={Routes.COOKBOOKS}
         component={Cookbooks}
         options={{
           title: "My Cookbooks",
         }}
       />
       <Stack.Screen
-        name="CookbookDetails"
+        name={Routes.COOKBOOK_DETAILS}
         component={CookbookDetails}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="RecipeBox"
+        name={Routes.RECIPE_BOX}
         component={RecipeBox}
         options={{
           title: "My Recipe Box",
         }}
       />
       <Stack.Screen
-        name="RecipeCreate"
+        name={Routes.RECIPE_CREATE}
         component={RecipeCreate}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="RecipeDetails"
+        name={Routes.RECIPE_DETAILS}
         component={RecipeDetails}
         options={({ route }) => ({
           title: route.params.title,

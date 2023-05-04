@@ -1,7 +1,6 @@
 import React from "react";
 import { FlatList, View, Image, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import { NavigationContainer } from "@react-navigation/native";
 
 import {
   AppText,

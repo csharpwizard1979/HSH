@@ -10,6 +10,7 @@ import {
   ListItemAction,
 } from "../components/controls";
 import shoppingList from "../data/mocks/shoppingList";
+import { Routes } from "../components/navigation";
 
 function ShoppingListScreen({ navigation }) {
   const [status, setStatus] = useState("active");
@@ -39,7 +40,7 @@ function ShoppingListScreen({ navigation }) {
       [
         {
           text: "Ok",
-          onPress: () => navigation.navigate("Main"),
+          onPress: () => navigation.navigate(Routes.HOME),
         },
       ]
     );

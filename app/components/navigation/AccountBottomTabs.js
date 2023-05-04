@@ -2,8 +2,12 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
-import { MealPlan, MyLists } from "../../screens";
-import { SiteStackNavigator, AuthNavigator } from "../navigation";
+import { MealPlan } from "../../screens";
+import {
+  AuthNavigator,
+  ListNavigator,
+  SiteStackNavigator,
+} from "../navigation";
 import config from "../../configs/config";
 
 function AccountBottomTabs(props) {
@@ -34,7 +38,7 @@ function AccountBottomTabs(props) {
       />
       <Tab.Screen
         name="My Lists"
-        component={MyLists}
+        component={ListNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name={config.icons.list} color={color} size={size} />

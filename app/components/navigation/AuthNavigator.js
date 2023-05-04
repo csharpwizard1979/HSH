@@ -2,7 +2,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { Account, Login, Register, Welcome } from "../../screens";
-import SiteStackNavigator from "./SiteStackNavigator";
+import Routes from "./Routes";
 
 function AuthNavigator(props) {
   const MainStack = createStackNavigator();
@@ -12,10 +12,10 @@ function AuthNavigator(props) {
         headerShown: false,
       }}
     >
-      <MainStack.Screen name="Account" component={Account} />
-      <MainStack.Screen name="Welcome" component={Welcome} />
-      <MainStack.Screen name="Login" component={Login} />
-      <MainStack.Screen name="Register" component={Register} />
+      <MainStack.Screen name={Routes.ACCOUNT} component={Account} />
+      <MainStack.Screen name={Routes.WELCOME} component={Welcome} />
+      <MainStack.Screen name={Routes.LOGIN} component={Login} />
+      <MainStack.Screen name={Routes.REGISTER} component={Register} />
     </MainStack.Navigator>
   );
 }

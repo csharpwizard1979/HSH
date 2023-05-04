@@ -1,13 +1,9 @@
 import React from "react";
-import { View, FlatList, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import config from "../configs/config";
-import {
-  AppText,
-  Icon,
-  ListItem,
-  ListItemSeparator,
-} from "../components/controls";
+import { Icon, ListItem } from "../components/controls";
+import { Routes } from "../components/navigation";
 
 function MyLists({ navigation }) {
   return (
@@ -21,7 +17,7 @@ function MyLists({ navigation }) {
               backgroundColor={config.colors.warning}
             />
           }
-          onPress={() => navigation.navigate("Projects")}
+          onPress={() => navigation.navigate(Routes.PROJECT_LIST)}
         />
         <ListItem
           title="TODO List"
@@ -32,7 +28,7 @@ function MyLists({ navigation }) {
               backgroundColor={config.colors.success}
             />
           }
-          onPress={() => navigation.navigate("ShoppingList")}
+          onPress={() => navigation.navigate(Routes.TODO)}
         />
         <ListItem
           title="Shopping List"
@@ -43,7 +39,7 @@ function MyLists({ navigation }) {
               backgroundColor={config.colors.danger}
             />
           }
-          onPress={() => navigation.navigate("ShoppingList")}
+          onPress={() => navigation.navigate(Routes.SHOPPING_LIST)}
         />
       </View>
     </View>

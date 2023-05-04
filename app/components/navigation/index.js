@@ -4,6 +4,7 @@ export { default as CookbookNavigator } from "./CookBookNavigator";
 export { default as CustomDrawerContent } from "./CustomDrawerContent";
 export { default as HomeDrawer } from "./HomeDrawer";
 export { default as InventoryNavigator } from "./InventoryNavigator";
+export { default as ListNavigator } from "./ListNavigator";
 export { default as MaintenanceNavigator } from "./MaintenanceNavigator";
 export { default as MealPlannerNavigator } from "./MealPlannerNavigator";
 export { default as ProjectNavigator } from "./ProjectNavigator";

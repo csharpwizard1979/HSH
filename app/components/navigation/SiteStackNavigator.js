@@ -11,6 +11,7 @@ import {
 } from "../navigation";
 
 import { Home } from "../../screens";
+import Routes from "./Routes";
 
 function SiteStackNavigator(props) {
   const SiteStack = createStackNavigator();
@@ -20,13 +21,31 @@ function SiteStackNavigator(props) {
         headerShown: false,
       }}
     >
-      <SiteStack.Screen name="Main" component={Home} />
-      <SiteStack.Screen name="Cookbooks" component={CookbookNavigator} />
-      <SiteStack.Screen name="Inventory" component={InventoryNavigator} />
-      <SiteStack.Screen name="Maintenace" component={MaintenanceNavigator} />
-      <SiteStack.Screen name="MealPlanner" component={MealPlannerNavigator} />
-      <SiteStack.Screen name="Projects" component={ProjectNavigator} />
-      <SiteStack.Screen name="ShoppingList" component={ShoppingNavigator} />
+      <SiteStack.Screen name={Routes.HOME_SCREEN} component={Home} />
+      <SiteStack.Screen
+        name={Routes.COOKBOOKS_SCREEN}
+        component={CookbookNavigator}
+      />
+      <SiteStack.Screen
+        name={Routes.INVENTORY_SCREEN}
+        component={InventoryNavigator}
+      />
+      <SiteStack.Screen
+        name={Routes.MAINTENANCE_SCREEN}
+        component={MaintenanceNavigator}
+      />
+      <SiteStack.Screen
+        name={Routes.MEAL_PLANNER_SCREEN}
+        component={MealPlannerNavigator}
+      />
+      <SiteStack.Screen
+        name={Routes.PROJECTS_SCREEN}
+        component={ProjectNavigator}
+      />
+      <SiteStack.Screen
+        name={Routes.SHOPPING_HOME_SCREEN}
+        component={ShoppingNavigator}
+      />
     </SiteStack.Navigator>
   );
 }
