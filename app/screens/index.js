@@ -13,7 +13,6 @@ export { default as RecipeBox } from "./RecipeBoxScreen";
 export { default as RecipeDetails } from "./RecipeDetailsScreen";
 export { default as RecipeCreate } from "./RecipeCreateScreen";
 export { default as Register } from "./RegisterScreen";
-export { default as ShoppingHome } from "./ShoppingHomeScreen";
 export { default as ShoppingList } from "./ShoppingListScreen";
 export { default as TodoList } from "./TodoListScreen";
 export { default as Welcome } from "./WelcomeScreen";
