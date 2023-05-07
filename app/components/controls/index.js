@@ -2,6 +2,7 @@ export { default as AppText } from "./AppText";
 export { default as AppTextInput } from "./AppTextInput";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
+export { default as CategorySelector } from "./CategorySelector";
 export { default as Icon } from "./Icon";
 export { default as ImageInput } from "./ImageInput";
 export { default as ImageInputList } from "./ImageInputList";
