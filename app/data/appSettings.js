@@ -6,7 +6,7 @@ export default [
     id: 1,
     title: "Cook Books",
     description: "Manage your Cookbooks",
-    slug: Routes.COOKBOOKS_SCREEN,
+    slug: "cookbooks",
     icon: {
       name: "menu-book",
       library: "MI",
@@ -17,7 +17,7 @@ export default [
     id: 2,
     title: "Inventory",
     description: "Manage your Inventory",
-    slug: Routes.INVENTORY_SCREEN,
+    slug: "Inventory",
     icon: {
       name: "inventory",
       library: "MI",
@@ -28,7 +28,7 @@ export default [
     id: 3,
     title: "Maintenace",
     description: "Home Maintenace Plan",
-    slug: Routes.MAINTENANCE_SCREEN,
+    slug: "Maintenance",
     icon: {
       name: "home-work",
       library: "MI",
@@ -39,7 +39,7 @@ export default [
     id: 4,
     title: "Meal Planner",
     description: "Manage and Plan your Menus",
-    slug: Routes.MEAL_PLANNER_SCREEN,
+    slug: "MealPlanner",
     icon: {
       name: "restaurant-menu",
       library: "MI",
@@ -50,21 +50,10 @@ export default [
     id: 5,
     title: "My Projects",
     description: "Manage your Projects",
-    slug: Routes.PROJECTS_SCREEN,
+    slug: "Projects",
     icon: {
       name: "arrow-projectile-multiple",
       backgroundColor: colors.primary,
-    },
-  },
-  {
-    id: 6,
-    title: "Shopping",
-    description: "Manage your Shopping Lists",
-    slug: Routes.SHOPPING_HOME_SCREEN,
-    icon: {
-      name: "shopping-bag",
-      library: "MI",
-      backgroundColor: colors.danger,
     },
   },
 ];
