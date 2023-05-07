@@ -6,7 +6,7 @@ export default [
     id: 1,
     title: "Cook Books",
     description: "Manage your Cookbooks",
-    slug: "cookbooks",
+    slug: Routes.COOKBOOKS,
     icon: {
       name: "menu-book",
       library: "MI",
@@ -17,7 +17,7 @@ export default [
     id: 2,
     title: "Inventory",
     description: "Manage your Inventory",
-    slug: "Inventory",
+    slug: Routes.INVENTORY,
     icon: {
       name: "inventory",
       library: "MI",
@@ -28,7 +28,7 @@ export default [
     id: 3,
     title: "Maintenace",
     description: "Home Maintenace Plan",
-    slug: "Maintenance",
+    slug: Routes.MAINTENANCE,
     icon: {
       name: "home-work",
       library: "MI",
@@ -39,7 +39,7 @@ export default [
     id: 4,
     title: "Meal Planner",
     description: "Manage and Plan your Menus",
-    slug: "MealPlanner",
+    slug: Routes.MEAL_PLANNER,
     icon: {
       name: "restaurant-menu",
       library: "MI",

@@ -7,7 +7,6 @@ import {
   MaintenanceNavigator,
   MealPlannerNavigator,
   ProjectNavigator,
-  ShoppingNavigator,
 } from "../navigation";
 
 import { Home } from "../../screens";
@@ -21,31 +20,21 @@ function SiteStackNavigator(props) {
         headerShown: false,
       }}
     >
-      <SiteStack.Screen name={Routes.HOME_SCREEN} component={Home} />
+      <SiteStack.Screen name={Routes.MAIN} component={Home} />
+      <SiteStack.Screen name={Routes.COOKBOOKS} component={CookbookNavigator} />
       <SiteStack.Screen
-        name={Routes.COOKBOOKS_SCREEN}
-        component={CookbookNavigator}
-      />
-      <SiteStack.Screen
-        name={Routes.INVENTORY_SCREEN}
+        name={Routes.INVENTORY}
         component={InventoryNavigator}
       />
       <SiteStack.Screen
-        name={Routes.MAINTENANCE_SCREEN}
+        name={Routes.MAINTENANCE}
         component={MaintenanceNavigator}
       />
       <SiteStack.Screen
-        name={Routes.MEAL_PLANNER_SCREEN}
+        name={Routes.MEAL_PLANNER}
         component={MealPlannerNavigator}
       />
-      <SiteStack.Screen
-        name={Routes.PROJECTS_SCREEN}
-        component={ProjectNavigator}
-      />
-      <SiteStack.Screen
-        name={Routes.SHOPPING_HOME_SCREEN}
-        component={ShoppingNavigator}
-      />
+      <SiteStack.Screen name={Routes.PROJECTS} component={ProjectNavigator} />
     </SiteStack.Navigator>
   );
 }

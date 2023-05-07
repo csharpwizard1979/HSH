@@ -12,7 +12,7 @@ function AuthNavigator(props) {
         headerShown: false,
       }}
     >
-      <MainStack.Screen name={Routes.ACCOUNT} component={Account} />
+      <MainStack.Screen name={Routes.ACCOUNT_SCREEN} component={Account} />
       <MainStack.Screen name={Routes.WELCOME} component={Welcome} />
       <MainStack.Screen name={Routes.LOGIN} component={Login} />
       <MainStack.Screen name={Routes.REGISTER} component={Register} />

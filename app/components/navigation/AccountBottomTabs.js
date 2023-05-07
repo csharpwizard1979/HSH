@@ -6,6 +6,7 @@ import { MealPlan } from "../../screens";
 import {
   AuthNavigator,
   ListNavigator,
+  Routes,
   SiteStackNavigator,
 } from "../navigation";
 import config from "../../configs/config";
@@ -24,7 +25,7 @@ function AccountBottomTabs(props) {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name={Routes.HOME}
         component={SiteStackNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
@@ -37,7 +38,7 @@ function AccountBottomTabs(props) {
         }}
       />
       <Tab.Screen
-        name="My Lists"
+        name={Routes.MY_LISTS}
         component={ListNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
@@ -46,7 +47,7 @@ function AccountBottomTabs(props) {
         }}
       />
       <Tab.Screen
-        name="Meal Plan"
+        name={Routes.MEAL_PLAN}
         component={MealPlan}
         options={{
           tabBarIcon: ({ color, size }) => (
@@ -55,7 +56,7 @@ function AccountBottomTabs(props) {
         }}
       />
       <Tab.Screen
-        name="My Account"
+        name={Routes.ACCOUNT}
         component={AuthNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (

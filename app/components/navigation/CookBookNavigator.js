@@ -31,7 +31,7 @@ function CookBookNavigator(props) {
       }}
     >
       <Stack.Screen
-        name={Routes.COOKBOOKS}
+        name={Routes.COOKBOOKS_SCREEN}
         component={Cookbooks}
         options={{
           title: "My Cookbooks",

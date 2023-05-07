@@ -9,8 +9,7 @@ function MealPlannerNavigator(props) {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name={Routes.MEAL_PLANNER} component={MealPlanner} />
-      <Stack.Screen name={Routes.MEAL_PLAN} component={MealPlan} />
+      <Stack.Screen name={Routes.MEAL_PLANNER_SCREEN} component={MealPlanner} />
     </Stack.Navigator>
   );
 }
