@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Alert, View, FlatList, StyleSheet } from "react-native";
+import { Alert, Image, View, FlatList, StyleSheet } from "react-native";
 
 import config from "../configs/config";
 import {
+  AppText,
   Button,
   ListItem,
   Icon,
@@ -56,6 +57,13 @@ function ShoppingListScreen({ navigation }) {
 
   return (
     <View style={config.styles.screen}>
+      <Image
+        style={styles.image}
+        source={require("../assets/recipe-cover.jpg")}
+      />
+      <View style={styles.detailsContainer}>
+        <AppText style={styles.heading}>My Shopping List</AppText>
+      </View>
       <View style={styles.btnContainer}>
         <TabItem isActive={status === "active"} onPress={toggleStatus}>
           Active
@@ -134,8 +142,23 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
   },
+  detailsContainer: {
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "center",
+    padding: 20,
+  },
   footer: {
     padding: 20,
+  },
+  heading: {
+    color: config.colors.primary,
+    fontSize: 22,
+    fontWeight: "700",
+  },
+  image: {
+    width: "100%",
+    height: 200,
   },
 });
 
