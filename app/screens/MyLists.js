@@ -1,13 +1,20 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { Image, View, StyleSheet } from "react-native";
 
 import config from "../configs/config";
-import { Icon, ListItem } from "../components/controls";
+import { AppText, Icon, ListItem } from "../components/controls";
 import { Routes } from "../components/navigation";
 
 function MyLists({ navigation }) {
   return (
     <View style={config.styles.screen}>
+      <Image
+        style={styles.image}
+        source={require("../assets/Maintenace.jpg")}
+      />
+      <View style={styles.detailsContainer}>
+        <AppText style={styles.heading}>My Lists</AppText>
+      </View>
       <View style={styles.container}>
         <ListItem
           title="Project List"
@@ -49,6 +56,21 @@ function MyLists({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+  },
+  detailsContainer: {
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "center",
+    padding: 20,
+  },
+  heading: {
+    color: config.colors.primary,
+    fontSize: 22,
+    fontWeight: "700",
+  },
+  image: {
+    width: "100%",
+    height: 200,
   },
 });
 
